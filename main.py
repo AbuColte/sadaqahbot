@@ -14,8 +14,10 @@ with open('hashtags.txt', 'r') as file:
     file.close()
 
 cl.video_upload(media_path, caption)
-medias = cl.hashtag_medias_recent("dailymuhammadsiddiqmenshawi", 3)
 
-for i, media in enumerate(medias):
-    cl.media_like(media.id)
-    print(f"liked success")
+user_id = '67458144000'
+ 
+reels = client.user_reels(user_id) 
+ 
+for reel in reels: 
+    client.like_reel(reel.pk)
