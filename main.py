@@ -17,7 +17,7 @@ cl.video_upload(media_path, caption)
 
 user_id = '67458144000'
  
-reels = client.user_reels(user_id) 
+reels = cl.user_reels(user_id) 
  
 for reel in reels: 
-    client.like_reel(reel.pk)
+    cl.like_reel(reel.pk)
